@@ -12,7 +12,16 @@
         <Pivot Title="E-MIG">
             <PivotItem Header="Map">
                 <Maps:MapControl Margin="0" MapServiceToken="ZLFq0PL1O88aM2ZiA80E~KaRjO_9tH84oys6LItWsmQ~AmT2djlPLBBzE8EB_8InEZtgYCXr1szFYf9N6lJfKWLMkA5jwLeatlMFJvQiUDGX" >
-
+                    <Maps:MapItemsControl ItemsSource="{Binding Vonatok}" x:Name="mapItems">
+                        <Maps:MapItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding IconSource}" Height="20" Tag="{Binding Index}"
+                                       Maps:MapControl.Location="{Binding Location}"
+                                       Maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}">
+                                </Image>
+                            </DataTemplate>
+                        </Maps:MapItemsControl.ItemTemplate>
+                    </Maps:MapItemsControl>
                 </Maps:MapControl>
             </PivotItem>
             <PivotItem Header="Train">

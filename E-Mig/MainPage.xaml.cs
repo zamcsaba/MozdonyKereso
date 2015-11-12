@@ -22,9 +22,35 @@ namespace E_Mig
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        List<Vonat> vonatok = new List<Vonat>();
+        MainViewModel wm = new MainViewModel();
+
         public MainPage()
         {
             this.InitializeComponent();
+            VonatBetoltes();
+
         }
+
+        async void VonatBetoltes()
+        {
+            vonatok = await DataConnection.Vonatok();
+            while (vonatok.Count == 0)
+            {
+
+            }
+            wm.Vonatok = vonatok;
+        }
+    }
+    public class MainViewModel
+    {
+        private ICollection<Vonat> _vonatok = new List<Vonat>();
+
+        public ICollection<Vonat> Vonatok
+        {
+            get { return _vonatok; }
+            set { _vonatok = value; }
+        }
+
     }
 }

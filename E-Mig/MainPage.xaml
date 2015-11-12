@@ -11,7 +11,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Pivot Title="E-MIG">
             <PivotItem Header="Map">
-                <Maps:MapControl Margin="0" MapServiceToken="ZLFq0PL1O88aM2ZiA80E~KaRjO_9tH84oys6LItWsmQ~AmT2djlPLBBzE8EB_8InEZtgYCXr1szFYf9N6lJfKWLMkA5jwLeatlMFJvQiUDGX" />
+                <Maps:MapControl Margin="0" MapServiceToken="ZLFq0PL1O88aM2ZiA80E~KaRjO_9tH84oys6LItWsmQ~AmT2djlPLBBzE8EB_8InEZtgYCXr1szFYf9N6lJfKWLMkA5jwLeatlMFJvQiUDGX" >
+
+                </Maps:MapControl>
             </PivotItem>
             <PivotItem Header="Train">
                 <Grid/>
@@ -20,6 +22,5 @@
                 <Grid/>
             </PivotItem>
         </Pivot>
-
     </Grid>
 </Page>

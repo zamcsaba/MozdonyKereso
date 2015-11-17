@@ -130,8 +130,6 @@ namespace E_Mig
                 vonat.Longitude = Convert.ToDouble(m1.Groups[1].ToString()) / 1000000d;
                 m1 = new Regex("vonatszam=\"(.*?)\"").Match(str);
                 vonat.Vonatszam = m1.Groups[1].ToString();
-                m1 = new Regex("uic=\"(.*?)\"").Match(str);
-                vonat.UIC = m1.Groups[1].ToString();
                 m1 = new Regex("Induló állomás:</td><td>(.*?)<").Match(str);
                 if (m1.Success) vonat.KiinduloAllomas = m1.Groups[1].ToString();
                 m1 = new Regex("Érkező állomás:</td><td>(.*?)<").Match(str);
@@ -140,7 +138,9 @@ namespace E_Mig
                 if (m1.Success) vonat.Icon = m1.Groups[1].ToString();
                 m1 = new Regex("tipus=\"(.*?)\"").Match(str);
                 if (m1.Success) vonat.VonatTipus = m1.Groups[1].ToString();
-                vonat.VonatTipus = count.ToString();
+                m1 = new Regex("uic=\"(.*?)\"").Match(str);
+                vonat.UIC = m1.Groups[1].ToString();
+                vonat.Index = count;
                 vonatLista.Add(vonat);
                 count++;
             }

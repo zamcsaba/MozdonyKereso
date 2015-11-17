@@ -28,8 +28,16 @@ namespace E_Mig
         public MainPage()
         {
             this.InitializeComponent();
+            this.InitializeLayout();
+
             VonatBetoltes();
 
+        }
+
+        void InitializeLayout()
+        {
+            map.ZoomLevel = 8;
+            map.Center = new Windows.Devices.Geolocation.Geopoint(new Windows.Devices.Geolocation.BasicGeoposition() { Latitude = 47.157466, Longitude = 19.292040 });
         }
 
         async void VonatBetoltes()
@@ -40,6 +48,35 @@ namespace E_Mig
 
             }
             wm.Vonatok = vonatok;
+            this.DataContext = wm;
+        }
+
+        private void btnMenuToggle_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMenuToggle_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            mainPage_SplitView.IsPaneOpen = !mainPage_SplitView.IsPaneOpen;
+        }
+
+        private void btnMapZoomIn_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            map.ZoomLevel++;
+        }
+
+        private void btnMapZoomOut_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnMapZoomOut_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (map.ZoomLevel > 1)
+            {
+                map.ZoomLevel--;
+            }
         }
     }
     public class MainViewModel

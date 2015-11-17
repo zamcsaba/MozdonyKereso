@@ -4,6 +4,7 @@ using System.Text;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 namespace E_Mig
 {
@@ -20,7 +21,7 @@ namespace E_Mig
         private MozdonyTipus _mozdonyTipus = MozdonyTipus.DizelEgyeb;
         private string _vonatTipus = "";
         private string _icon = "";
-        private string _iconSource = "";
+        private string _iconSource = null;
 
         //Properties
         public string UIC
@@ -91,7 +92,7 @@ namespace E_Mig
         {
             get
             {
-                return "";
+                return getSource();
             }
         }
 
@@ -143,6 +144,11 @@ namespace E_Mig
         MozdonyTipus getMT(string psz)
         {
             return MozdonyTipus.ElektromosUj;
+        }
+        public int Index
+        {
+            get;
+            set;
         }
     }
 

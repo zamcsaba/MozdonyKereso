@@ -155,8 +155,60 @@ namespace E_Mig
                     return MozdonyTipus.ElektromosRegi;
                 case "433":
                     return MozdonyTipus.ElektromosRegi;
-                case "1047":
+                case "470":
                     return MozdonyTipus.ElektromosUj;
+                case "480":
+                    return MozdonyTipus.ElektromosUj;
+                case "460":
+                    return MozdonyTipus.ElektromosSzocskeGigant;
+                case "630":
+                    return MozdonyTipus.ElektromosSzocskeGigant;
+                case "408":
+                    return MozdonyTipus.Dizel;
+                case "438":
+                    return MozdonyTipus.Dizel;
+                case "448":
+                    return MozdonyTipus.Dizel;
+                case "478":
+                    return MozdonyTipus.Dizel;
+                case "628":
+                    return MozdonyTipus.Dizel;
+
+                case "0414":
+                    return MozdonyTipus.ElektromosMotor;
+                case "0424":
+                    return MozdonyTipus.ElektromosMotor;
+                case "434":
+                    return MozdonyTipus.ElektromosMotor;
+                case "2105":
+                    return MozdonyTipus.ElektromosMotor;
+                case "8076":
+                    return MozdonyTipus.ElektromosMotor;
+
+                case "5341":
+                    return MozdonyTipus.FlirtTalent;
+                case "1415":
+                    return MozdonyTipus.FlirtTalent;
+
+                case "5342":
+                    return MozdonyTipus.FlirtTalent;
+
+                case "1426": //desiro
+                    return MozdonyTipus.DizelMotor;
+                case "117": //bézé (0117)
+                    return MozdonyTipus.DizelMotor;
+                case "1416": //uzgyi
+                    return MozdonyTipus.DizelMotor;
+
+
+
+
+
+
+
+
+                default:
+                    return MozdonyTipus.ElektromosEgyeb;
             }
             
             return MozdonyTipus.ElektromosUj;
@@ -177,6 +229,9 @@ namespace E_Mig
         ElektromosRegi,
         ElektromosUj,
         ElektromosMotor,
-        ElektromosEgyeb
+        ElektromosSzocskeGigant,
+        ElektromosEgyeb,
+        FlirtTalent
+
     }
 }

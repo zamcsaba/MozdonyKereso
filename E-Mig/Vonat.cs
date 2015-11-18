@@ -130,8 +130,10 @@ namespace E_Mig
                 case MozdonyTipus.ElektromosEgyeb:
                     src += "Yellow" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
+                default:
+                    return @"Images\BaseIcon_0.png";
             }
-            return "";
+            return src;
         }
         int getAngle()
         {

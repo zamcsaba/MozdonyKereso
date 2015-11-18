@@ -42,7 +42,8 @@
                                 <DataTemplate>
                                     <Image Source="{Binding IconSource}" Height="20" Tag="{Binding Index}"
                                        Maps:MapControl.Location="{Binding Location}"
-                                       Maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}">
+                                       Maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
+                                       Tapped="Image_Tapped">
                                     </Image>
                                 </DataTemplate>
                             </Maps:MapItemsControl.ItemTemplate>

@@ -27,6 +27,7 @@ namespace E_Mig
 
         public MainPage()
         {
+            
             this.InitializeComponent();
             this.InitializeLayout();
 
@@ -77,6 +78,32 @@ namespace E_Mig
             {
                 map.ZoomLevel--;
             }
+        }
+
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Image img = (Image)sender;
+            int index = Convert.ToInt32(img.Tag);
+            ContentDialog dlg = new ContentDialog();
+            dlg.Title = vonatok[index].Palyaszam;
+            dlg.Content = String.Format("UIC: {0}\nVonatszám: {1}", new object[] { vonatok[index].UIC.ToString(), vonatok[index].Vonatszam.ToString() });
+            dlg.IsPrimaryButtonEnabled = true;
+            dlg.PrimaryButtonText = "OK";
+            dlg.PrimaryButtonClick += Dlg_PrimaryButtonClick;
+            dlg.ShowAsync();
+        }
+
+        private void Dlg_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            sender.Hide();
+        }
+
+        async void VonatDialogShow(Vonat v)
+        {
+            ContentDialog dlg = new ContentDialog();
+
+            dlg.Title = v.Palyaszam;
+            dlg.Content = "\n" + String.Format("UIC: \t{0} \n Vonatszám: \t{1}", new object[] { v.UIC, v.Palyaszam });
         }
     }
     public class MainViewModel

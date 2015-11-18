@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <SplitView x:Name="mainPage_SplitView" Margin="182,516,0,0" OpenPaneLength="160">
+        <SplitView x:Name="settings_SplitView" Margin="182,516,0,0" OpenPaneLength="160">
             <FlyoutBase.AttachedFlyout>
                 <MenuFlyout/>
             </FlyoutBase.AttachedFlyout>

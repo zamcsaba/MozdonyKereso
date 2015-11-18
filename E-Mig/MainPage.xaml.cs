@@ -105,6 +105,16 @@ namespace E_Mig
             dlg.Title = v.Palyaszam;
             dlg.Content = "\n" + String.Format("UIC: \t{0} \n Vonatszám: \t{1}", new object[] { v.UIC, v.Palyaszam });
         }
+
+        private void menu_map_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menu_station_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     public class MainViewModel
     {

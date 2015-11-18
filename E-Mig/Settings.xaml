@@ -8,11 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <SplitView x:Name="mainPage_SplitView" Margin="182,516,0,0" OpenPaneLength="160">
-            <FlyoutBase.AttachedFlyout>
-                <MenuFlyout/>
-            </FlyoutBase.AttachedFlyout>
+        <SplitView x:Name="mainPage_SplitView" Margin="0,40,0,0" OpenPaneLength="160">
             <SplitView.Pane>
                 <Grid Padding="10, 10">
                     <Button x:Name="menu_train" Content="Vonatinformáció" HorizontalAlignment="Left" Height="40" Margin="10,40,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Width="140"/>
@@ -20,20 +16,23 @@
                     <Button x:Name="menu_map" Content="Térkép" HorizontalAlignment="Left" Height="40" Margin="-10,0,0,550" VerticalAlignment="Bottom" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Width="120"/>
                 </Grid>
             </SplitView.Pane>
-
+            <SplitView.Content>
+                <Grid>
+                    <ToggleSwitch x:Name="MapUpdateSwitcher" Header="Térkép automatikus frissítése" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,44,0,0" IsOn="True" FontSize="13.333" Width="170"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="26" Margin="10,134,0,0" VerticalAlignment="Top" Width="130" FontSize="13.333">
+                        <ComboBoxItem Content="10 másodperc" IsSelected="True"/>
+                        <ComboBoxItem Content="20 másodperc"/>
+                        <ComboBoxItem Content="30 másodperc" IsSelected="True"/>
+                        <ComboBoxItem Content="60 másodperc"/>
+                    </ComboBox>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="0,102,0,0" TextWrapping="Wrap" Text="Frissítési gyakoriság" VerticalAlignment="Top" Width="191" BorderBrush="Black" FontSize="13.333"/>
+                    <TextBox x:Name="Térkép_frissítése" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" Text="Térkép frissítése" VerticalAlignment="Top" Width="230" BorderBrush="Black" FontSize="18.667"/>
+                </Grid>
+            </SplitView.Content>
         </SplitView>
         <Button x:Name="btnMenuToggle" Content="&#xE700;" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" FontFamily="Segoe MDL2 Assets" Click="btnMenuToggle_Click" Tapped="btnMenuToggle_Tapped" Background="#22FFFFFF"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="E-MIG" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="Beállítások" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22"/>
-        <ToggleSwitch x:Name="MapUpdateSwitcher" Header="Térkép automatikus frissítése" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,95,0,0" IsOn="True" FontSize="13.333" Width="170"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="26" Margin="10,187,0,0" VerticalAlignment="Top" Width="130" FontSize="13.333">
-            <ComboBoxItem Content="10 másodperc" IsSelected="True"/>
-            <ComboBoxItem Content="20 másodperc"/>
-            <ComboBoxItem Content="30 másodperc" IsSelected="True"/>
-            <ComboBoxItem Content="60 másodperc"/>
-        </ComboBox>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="0,155,0,0" TextWrapping="Wrap" Text="Frissítési gyakoriság" VerticalAlignment="Top" Width="191" BorderBrush="Black" FontSize="13.333"/>
-        <TextBox x:Name="Térkép_frissítése" HorizontalAlignment="Left" Height="44" Margin="0,51,0,0" TextWrapping="Wrap" Text="Térkép frissítése" VerticalAlignment="Top" Width="230" BorderBrush="Black" FontSize="18.667"/>
-
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="Térkép" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22"/>
     </Grid>
 </Page>
+    

@@ -15,7 +15,7 @@
                 </Grid>
             </CommandBar.Content>
             <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Setting" Label="Settings"/>
+                <AppBarButton x:Name="command_settings" Icon="Setting" Label="Settings" Tapped="command_settings_Tapped"/>
             </CommandBar.SecondaryCommands>
             <CommandBar.PrimaryCommands>
                 <!--<AppBarButton Icon="Accept" Label="appbarbutton"/>
@@ -28,10 +28,11 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <SplitView x:Name="mainPage_SplitView" Margin="0,40,0,0" OpenPaneLength="200">
             <SplitView.Pane>
-                <Grid Padding="10,0,10,10">
-                    <Button x:Name="menu_train" Content="Vonatinformáció" HorizontalAlignment="Stretch" Height="40" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
-                    <Button x:Name="menu_station" Content="Állomásinformáció" HorizontalAlignment="Stretch" Height="40" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Click="menu_station_Click"/>
-                    <Button x:Name="menu_map" Content="Térkép" HorizontalAlignment="Stretch" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
+                <Grid>
+                    <Button x:Name="menu_train" Content="Vonatinformáció" HorizontalAlignment="Stretch" Height="40" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
+                    <Button x:Name="menu_station" Content="Állomásinformáció" HorizontalAlignment="Stretch" Height="40" Margin="10,90,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Click="menu_station_Click"/>
+                    <Button x:Name="menu_map" Content="Térkép" HorizontalAlignment="Stretch" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
+                    <Button x:Name="menu_settings" Content="Settings" HorizontalAlignment="Stretch" Margin="10,0,0,30" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Background="Transparent" Height="40" Tapped="menu_settings_Tapped"/>
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
@@ -55,7 +56,7 @@
             </SplitView.Content>
         </SplitView>
         <Button x:Name="btnMenuToggle" Content="&#xE700;" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" FontFamily="Segoe MDL2 Assets" Click="btnMenuToggle_Click" Tapped="btnMenuToggle_Tapped" Background="#22FFFFFF"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="E-MIG" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="Térkép" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22"/>
+        <TextBlock x:Name="tbMainTitle" HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="E-MIG" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22" FontWeight="Bold"/>
+        <TextBlock x:Name="tbPageTitle" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" Text="Térkép" VerticalAlignment="Top" Height="41" Padding="0,5,0,0" FontSize="22"/>
     </Grid>
 </Page>

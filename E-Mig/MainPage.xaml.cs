@@ -115,6 +115,16 @@ namespace E_Mig
         {
 
         }
+
+        private void command_settings_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Settings));
+        }
+
+        private void menu_settings_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Settings));
+        }
     }
     public class MainViewModel
     {

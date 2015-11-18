@@ -45,7 +45,7 @@ namespace E_Mig
             obj = new Uri(@"http://iemig.mav-trakcio.hu/netr/emig.aspx");
             obj1 = new Dictionary<string, string>();
             ((Dictionary<string, string>)obj1).Add("u", "public");
-            ((Dictionary<string, string>)obj1).Add("s", ""); //s!!
+            ((Dictionary<string, string>)obj1).Add("s", s); //s!!
             ((Dictionary<string, string>)obj1).Add("t", "publicsandr");
             ((Dictionary<string, string>)obj1).Add("q", "Q5");
             ((Dictionary<string, string>)obj1).Add("lt", "SqlCreate");

@@ -145,7 +145,22 @@ namespace E_Mig
         }
         MozdonyTipus getMT(string psz)
         {
+            string psz1 = psz.Trim().Split(' ')[0];
+
+            switch (psz1)
+            {
+                case "431":
+                    return MozdonyTipus.ElektromosRegi;
+                case "432":
+                    return MozdonyTipus.ElektromosRegi;
+                case "433":
+                    return MozdonyTipus.ElektromosRegi;
+                case "1047":
+                    return MozdonyTipus.ElektromosUj;
+            }
+            
             return MozdonyTipus.ElektromosUj;
+            
         }
         public int Index
         {

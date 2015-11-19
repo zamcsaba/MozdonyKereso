@@ -36,7 +36,7 @@
             <SplitView.Content>
                 <Grid>
                     <ToggleSwitch x:Name="updateSwitch" Header="Térkép automatikus frissítése" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,44,0,0" IsOn="True" FontSize="13.333" Width="170"/>
-                    <ComboBox x:Name="cbUpdateInterval" HorizontalAlignment="Left" Height="26" Margin="10,134,0,0" VerticalAlignment="Top" Width="130" FontSize="13.333">
+                    <ComboBox x:Name="cbUpdateInterval" HorizontalAlignment="Left" Height="30" Margin="10,134,0,0" VerticalAlignment="Top" Width="130" FontSize="13.333">
                         <ComboBoxItem Content="10 másodperc" IsSelected="True"/>
                         <ComboBoxItem Content="20 másodperc"/>
                         <ComboBoxItem Content="30 másodperc" IsSelected="True"/>

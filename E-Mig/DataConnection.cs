@@ -118,6 +118,7 @@ namespace E_Mig
         }
         static void VonatListaLoad()
         {
+            vonatLista = new List<Vonat>();
             MatchCollection match = new Regex("<Mozdony (.*?)></Mozdony>").Matches(vonatokHtml.ToString());
             int count = 0;
             foreach (Match m in match)

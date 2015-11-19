@@ -29,16 +29,16 @@
         <SplitView x:Name="mainPage_SplitView" Margin="0,40,0,0" OpenPaneLength="200">
             <SplitView.Pane>
                 <Grid>
-                    <Button x:Name="menu_train" Content="Vonatinformáció" HorizontalAlignment="Stretch" Height="40" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
-                    <Button x:Name="menu_station" Content="Állomásinformáció" HorizontalAlignment="Stretch" Height="40" Margin="10,90,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Click="menu_station_Click"/>
-                    <Button x:Name="menu_map" Content="Térkép" HorizontalAlignment="Stretch" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
-                    <Button x:Name="menu_settings" Content="Settings" HorizontalAlignment="Stretch" Margin="10,0,0,30" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Background="Transparent" Height="40" Tapped="menu_settings_Tapped"/>
+                    <Button x:Name="menu_train" Content="Vonatinformáció" HorizontalAlignment="Stretch" Height="40" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
+                    <Button x:Name="menu_station" Content="Állomásinformáció" HorizontalAlignment="Stretch" Height="40" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent" Click="menu_station_Click"/>
+                    <Button x:Name="menu_map" Content="Térkép" HorizontalAlignment="Stretch" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Left" Background="Transparent"/>
+                    <Button x:Name="menu_settings" Content="Settings" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Background="Transparent" Height="40" Tapped="menu_settings_Tapped"/>
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
                     <Maps:MapControl x:Name="map" Margin="0" MapServiceToken="ZLFq0PL1O88aM2ZiA80E~KaRjO_9tH84oys6LItWsmQ~AmT2djlPLBBzE8EB_8InEZtgYCXr1szFYf9N6lJfKWLMkA5jwLeatlMFJvQiUDGX" >
-                        <Maps:MapItemsControl ItemsSource="{Binding Vonatok}" x:Name="mapItems">
+                        <Maps:MapItemsControl ItemsSource="{Binding Vonatok.Result}" x:Name="mapItems">
                             <Maps:MapItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Image Source="{Binding IconSource}" Height="20" Tag="{Binding Index}"

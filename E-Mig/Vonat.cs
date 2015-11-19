@@ -10,7 +10,7 @@ namespace E_Mig
 {
     public class Vonat
     {
-        //Fields
+        #region Fields
         private string _uic = "";
         private string _palyaszam = "";
         private double _lat = 0;
@@ -22,8 +22,9 @@ namespace E_Mig
         private string _vonatTipus = "";
         private string _icon = "";
         private string _iconSource = null;
+        #endregion
 
-        //Properties
+        #region Properties
         public string UIC
         {
             get { return _uic; }
@@ -95,6 +96,7 @@ namespace E_Mig
                 return getSource();
             }
         }
+        #endregion
 
         //Helpers
         string filterUIC(string uic)
@@ -135,13 +137,22 @@ namespace E_Mig
             }
             return src;
         }
-        int getAngle()
+        string getAngle()
         {
             if (_icon != "z-z-a" && _icon != "z-l-a" && _icon != "z-p-a" && _icon != "p-z-a" && _icon != "l-z-a")
             {
-                return Convert.ToInt32(_icon.Split('-')[2]);
+                string s = _icon.Split('-')[2];
+                if (s == "000")
+                {
+                    return "0";
+                }
+                if (s.StartsWith("0"))
+                {
+                    s = s.Remove(0, 1);
+                }
+                return s;
             }
-            else return 0;
+            else return "0";
         }
         MozdonyTipus getMT(string psz)
         {
@@ -197,22 +208,13 @@ namespace E_Mig
                     return MozdonyTipus.DizelMotor;
                 case "117": //bézé (0117)
                     return MozdonyTipus.DizelMotor;
-                case "1416": //uzgyi
+                case "1416": //uzsgyi
                     return MozdonyTipus.DizelMotor;
 
-
-
-
-
-
-
-
+                    
                 default:
                     return MozdonyTipus.ElektromosEgyeb;
             }
-            
-            return MozdonyTipus.ElektromosUj;
-            
         }
         public int Index
         {
@@ -232,6 +234,5 @@ namespace E_Mig
         ElektromosSzocskeGigant,
         ElektromosEgyeb,
         FlirtTalent
-
     }
 }

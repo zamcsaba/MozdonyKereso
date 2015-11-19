@@ -174,7 +174,10 @@ namespace E_Mig
                     return MozdonyTipus.ElektromosSzocskeGigant;
                 case "630":
                     return MozdonyTipus.ElektromosSzocskeGigant;
+
                 case "408":
+                    return MozdonyTipus.Dizel;
+                case "418":
                     return MozdonyTipus.Dizel;
                 case "438":
                     return MozdonyTipus.Dizel;
@@ -195,6 +198,31 @@ namespace E_Mig
                     return MozdonyTipus.ElektromosMotor;
                 case "8076":
                     return MozdonyTipus.ElektromosMotor;
+                case "8005": //bdt vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "8007": //bdt vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "8027": //bdt vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "8028": //btzx vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "8055": //bydtee vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "8207": //bmxtz
+                    return MozdonyTipus.ElektromosMotor;
+                case "8227": //bdt vezérlő
+                    return MozdonyTipus.ElektromosMotor;
+                case "1136": //ikerBZ
+                    return MozdonyTipus.DizelMotor;
+                case "1416": //uzsgyi
+                    return MozdonyTipus.ElektromosMotor;
+                case "1426": //desiro
+                    return MozdonyTipus.ElektromosMotor;
+
+
+                case "127": //bzmot
+                    return MozdonyTipus.DizelMotor;
+
 
                 case "5341":
                     return MozdonyTipus.FlirtTalent;
@@ -204,13 +232,10 @@ namespace E_Mig
                 case "5342":
                     return MozdonyTipus.FlirtTalent;
 
-                case "1426": //desiro
-                    return MozdonyTipus.DizelMotor;
+                
                 case "117": //bézé (0117)
                     return MozdonyTipus.DizelMotor;
-                case "1416": //uzsgyi
-                    return MozdonyTipus.DizelMotor;
-
+               
                     
                 default:
                     return MozdonyTipus.ElektromosEgyeb;

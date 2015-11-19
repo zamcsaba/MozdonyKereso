@@ -42,8 +42,8 @@
                         <ComboBoxItem Content="30 másodperc" IsSelected="True"/>
                         <ComboBoxItem Content="60 másodperc"/>
                     </ComboBox>
-                    <TextBox x:Name="tbUpdateIntervalTitle" HorizontalAlignment="Left" Height="20" Margin="0,102,0,0" TextWrapping="Wrap" Text="Frissítési gyakoriság" VerticalAlignment="Top" Width="191" BorderBrush="Black" FontSize="13.333"/>
-                    <TextBox x:Name="tbUpdateTitle" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" Text="Térkép frissítése" VerticalAlignment="Top" Width="230" BorderBrush="Black" FontSize="18.667"/>
+                    <TextBlock x:Name="tbUpdateIntervalTitle" HorizontalAlignment="Left" Height="20" Margin="10,102,0,0" TextWrapping="Wrap" Text="Frissítési gyakoriság" VerticalAlignment="Top" Width="191"  FontSize="13.333"/>
+                    <TextBlock x:Name="tbUpdateTitle" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="Térkép frissítése" VerticalAlignment="Top" Width="230"  FontSize="18.667" Margin="10,8,0,0"/>
                 </Grid>
             </SplitView.Content>
         </SplitView>

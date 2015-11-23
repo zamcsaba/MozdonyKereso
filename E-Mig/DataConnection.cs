@@ -158,6 +158,19 @@ namespace E_Mig
             Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
             return new string(chars);
         }
+        static async Task<List<Vonat>> loadMetrans()
+        {
+            List<Vonat> meTrains = new List<Vonat>();
+            object o = HttpWebRequest.CreateHttp("http://poloha.vozu.cz/init-vehicles/public");
+            ((HttpWebRequest)o).Method = "GET";
+            ((HttpWebRequest)o).Headers["UserAgent"] = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
+            object o2 = await ((HttpWebRequest)o).GetResponseAsync();
+            string data = await new StreamReader(((HttpWebResponse)o2).GetResponseStream()).ReadToEndAsync();
+            
+
+            Regex r = new Regex("");
+        }
+
         public static async Task<List<Vonat>> Vonatok()
         {
             await getSessionId();

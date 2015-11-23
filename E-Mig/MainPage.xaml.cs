@@ -44,8 +44,6 @@ namespace E_Mig
             this.Loaded += MainPage_Loaded;
         }
 
-
-
         async Task VonatBetoltes()
         {
             wm = new MainViewModel();
@@ -143,7 +141,6 @@ namespace E_Mig
             get;
             private set;
         }
-
     }
 
     public sealed class TaskCompleteNotification<TResult> : INotifyPropertyChanged

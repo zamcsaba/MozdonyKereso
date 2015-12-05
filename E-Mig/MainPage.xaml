@@ -50,8 +50,30 @@
                             </Maps:MapItemsControl.ItemTemplate>
                         </Maps:MapItemsControl>
                     </Maps:MapControl>
-                    <Button x:Name="btnMapZoomIn" Content="&#xE710;" Height="25" Width="25" Margin="0,0,10,75" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Tapped="btnMapZoomIn_Tapped"/>
-                    <Button x:Name="btnMapZoomOut" Content="&#xE738;" Width="25" Margin="0,0,10,40" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Click="btnMapZoomOut_Click" Tapped="btnMapZoomOut_Tapped" Height="25"/>
+                    <Button x:Name="btnMapZoomIn" Content="&#xE710;" Height="25" Width="25" Margin="0,0,10,60" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Tapped="btnMapZoomIn_Tapped"/>
+                    <Button x:Name="btnMapZoomOut" Content="&#xE738;" Width="25" Margin="0,0,10,25" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Click="btnMapZoomOut_Click" Tapped="btnMapZoomOut_Tapped" Height="25"/>
+                    <Button x:Name="btnMapSearch" Content="&#59166;" Width="25" Margin="0,10,10,0" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="0" FontFamily="Segoe MDL2 Assets" Height="26">
+                        <Button.Flyout>
+                            <Flyout>
+                                <Grid Height="203" Width="129">
+                                    <Button x:Name="btnSearch" Content="Query" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="64" Height="30" Margin="0" Click="btnSearch_Click"/>
+                                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-2,-2,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" FontSize="18" FontWeight="Medium"/>
+                                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,28,0,0" TextWrapping="Wrap" Text="Search type:" VerticalAlignment="Top"/>
+                                    <ComboBox x:Name="cbQueryType" HorizontalAlignment="Stretch" Margin="0,56,0,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged" SelectedIndex="0">
+                                        <ComboBox.Items>
+                                            <ComboBoxItem>UIC</ComboBoxItem>
+                                            <ComboBoxItem>Loc. No.</ComboBoxItem>
+                                            <ComboBoxItem>Train ID</ComboBoxItem>
+                                            <ComboBoxItem>Location</ComboBoxItem>
+                                        </ComboBox.Items>
+                                    </ComboBox>
+                                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,95,0,0" TextWrapping="Wrap" Text="Value:" VerticalAlignment="Top"/>
+                                    <TextBox x:Name="textBox" Margin="0,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+                                </Grid>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
                 </Grid>
             </SplitView.Content>
         </SplitView>

@@ -111,6 +111,7 @@
     </Compile>
     <Compile Include="Vonat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VonatQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

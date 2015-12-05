@@ -112,7 +112,7 @@ namespace E_Mig
             switch (_mozdonyTipus)
             {
                 case MozdonyTipus.Dizel:
-                    src += "Grey" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
+                    src += "Red" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
                 case MozdonyTipus.DizelMotor:
                     src += "Orange" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
@@ -121,15 +121,21 @@ namespace E_Mig
                     src += "BG" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
                 case MozdonyTipus.ElektromosRegi:
-                    src += "Red" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
-                    break;
-                case MozdonyTipus.ElektromosUj:
                     src += "Blue" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
+                case MozdonyTipus.ElektromosUj:
+                    src += "Grey" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
+                    break;
                 case MozdonyTipus.ElektromosMotor:
-                    src += "Green" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
+                    src += "Grey" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
                 case MozdonyTipus.ElektromosEgyeb:
+                    src += "Grey" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
+                    break;
+                case MozdonyTipus.ElektromosSzocskeGigant:
+                    src += "Blue" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
+                    break;
+                case MozdonyTipus.FlirtTalent:
                     src += "Yellow" + "_" + _vonatTipus + "_" + getAngle().ToString() + ".png";
                     break;
                 default:

@@ -49,6 +49,11 @@ namespace E_Mig
             wm = new MainViewModel();
             this.DataContext = wm;
         }
+        async Task VonatFrissites()
+        {
+            wm = new MainViewModel();
+            this.DataContext = wm;
+        }
         void VonatDialogShow(Vonat v)
         {
             ContentDialog dlg = new ContentDialog();
@@ -127,6 +132,35 @@ namespace E_Mig
             base.OnNavigatedTo(e);
         }
         #endregion
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            SearchedViewModel sm;
+            switch (((ComboBoxItem)cbQueryType.SelectedValue).Content.ToString())
+            {
+                case "UIC":
+                    sm = new SearchedViewModel(QueryType.UIC, textBox.Text);
+                    this.DataContext = sm;
+                    break;
+                case "Loc. No.":
+                    sm = new SearchedViewModel(QueryType.Loc_No, textBox.Text);
+                    this.DataContext = sm;
+                    break;
+                case "Train ID":
+                    sm = new SearchedViewModel(QueryType.Train_ID, textBox.Text);
+                    this.DataContext = sm;
+                    break;
+                case "Location":
+                    sm = new SearchedViewModel(QueryType.Location, textBox.Text);
+                    this.DataContext = sm;
+                    break;
+            }
+        }
     }
 
     public class MainViewModel
@@ -134,6 +168,33 @@ namespace E_Mig
         public MainViewModel()
         {
             Vonatok = new TaskCompleteNotification<List<Vonat>>(DataConnection.Vonatok());
+        }
+
+        public TaskCompleteNotification<List<Vonat>> Vonatok
+        {
+            get;
+            private set;
+        }
+    }
+    public class SearchedViewModel
+    {
+        public SearchedViewModel(QueryType type, string queryStr)
+        {
+            switch(type)
+            {
+                case QueryType.Location:
+                    Vonatok = new TaskCompleteNotification<List<Vonat>>(VonatQuery.queryByLocations());
+                    break;
+                case QueryType.Loc_No:
+                    Vonatok = new TaskCompleteNotification<List<Vonat>>(VonatQuery.queryByPSz(queryStr));
+                    break;
+                case QueryType.Train_ID:
+                    Vonatok = new TaskCompleteNotification<List<Vonat>>(VonatQuery.queryByTrainId(queryStr));
+                    break;
+                case QueryType.UIC:
+                    Vonatok = new TaskCompleteNotification<List<Vonat>>(VonatQuery.queryByUIC(queryStr));
+                    break;
+            }
         }
 
         public TaskCompleteNotification<List<Vonat>> Vonatok

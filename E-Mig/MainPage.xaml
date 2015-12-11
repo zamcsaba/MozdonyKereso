@@ -50,9 +50,9 @@
                             </Maps:MapItemsControl.ItemTemplate>
                         </Maps:MapItemsControl>
                     </Maps:MapControl>
-                    <Button x:Name="btnMapZoomIn" Content="&#xE710;" Height="25" Width="25" Margin="0,0,10,60" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Tapped="btnMapZoomIn_Tapped"/>
-                    <Button x:Name="btnMapZoomOut" Content="&#xE738;" Width="25" Margin="0,0,10,25" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Click="btnMapZoomOut_Click" Tapped="btnMapZoomOut_Tapped" Height="25"/>
-                    <Button x:Name="btnMapSearch" Content="&#59166;" Width="25" Margin="0,10,10,0" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="0" FontFamily="Segoe MDL2 Assets" Height="26">
+                    <Button x:Name="btnMapZoomIn" Content="&#xE710;" Height="36" Width="36" Margin="0,0,10,72" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Tapped="btnMapZoomIn_Tapped"/>
+                    <Button x:Name="btnMapZoomOut" Content="&#xE738;" Width="36" Margin="0,0,10,25" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0" FontFamily="Segoe MDL2 Assets" Click="btnMapZoomOut_Click" Tapped="btnMapZoomOut_Tapped" Height="36"/>
+                    <Button x:Name="btnMapSearch" Content="&#59166;" Width="36" Margin="0,10,10,0" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="0" FontFamily="Segoe MDL2 Assets" Height="36">
                         <Button.Flyout>
                             <Flyout>
                                 <Grid Height="203" Width="129">
@@ -73,6 +73,9 @@
                                 </Grid>
                             </Flyout>
                         </Button.Flyout>
+                    </Button>
+                    <Button x:Name="btnRefresh" Content="&#59541;" Width="36" Margin="0,60,10,0" Background="#99000000" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="0" FontFamily="Segoe MDL2 Assets" Height="36" Tapped="btnRefresh_Tapped">
+                       
                     </Button>
                 </Grid>
             </SplitView.Content>

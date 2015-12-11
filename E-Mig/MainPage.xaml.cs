@@ -161,6 +161,12 @@ namespace E_Mig
                     break;
             }
         }
+
+        private void btnRefresh_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            wm = new MainViewModel();
+            this.DataContext = wm;
+        }
     }
 
     public class MainViewModel
